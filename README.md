@@ -12,7 +12,7 @@ look for a URL for remote logging (only for `window.console.error`).
 
 ```typescript
 // other imports above
-import { AngryLogModule, AngryLogService } from "angry-log";
+import { AngryLogModule } from "angry-log";
 
 @NgModule({
     bootstrap: [
@@ -26,9 +26,6 @@ import { AngryLogModule, AngryLogService } from "angry-log";
         HttpModule,
         JsonpModule,
         AngryLogModule
-    ],
-    providers: [
-        AngryLogService
     ]
 })
 export class AppModule {}
