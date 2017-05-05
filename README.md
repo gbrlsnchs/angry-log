@@ -17,6 +17,8 @@ If [Angular]'s `isDevMode()` returns `true`,
 `window.console.log` and variants will work as usual. Otherwise, Angry Log will 
 look for a URL for remote logging (only for `window.console.error`).
 
+![](https://i.imgur.com/mNoVwlc.png)
+
 Simply import the module:
 ```typescript
 /* app.module.ts */
@@ -72,9 +74,6 @@ export class AppComponent {
     }
 }
 ```
-
-The result will be:
-![](https://i.imgur.com/mNoVwlc.png)
 
 ## Settings
 
