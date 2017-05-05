@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.3] - 2017-05-05
+### Added
+- An example picture in README.
+
+### Changed
+- The code sample is now "split" in two files for better representation of the example picture.
+
 ## [0.2.2] - 2017-05-05
 ### Fixed
 - Whitespace before the title.
@@ -33,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial version.
 
+[0.2.3]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/gbrlsnchs/angry-log/compare/v0.1.1...v0.2.0
