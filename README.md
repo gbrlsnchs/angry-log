@@ -1,6 +1,6 @@
 # Angry Log
 
-![Yes, I'm angry!](https://t5.rbxcdn.com/8e00ad493b6375b36a1260d2127dad09)
+![Yes, I'm angry!](https://i.imgur.com/qeoFdfd.png)
 > "Stop cutting logs off! At least for development environments..."
 
 ## Benefits
@@ -17,8 +17,13 @@ If [Angular]'s `isDevMode()` returns `true`,
 `window.console.log` and variants will work as usual. Otherwise, Angry Log will 
 look for a URL for remote logging (only for `window.console.error`).
 
+![](http://i.imgur.com/JOUm5rp.png)
+![](https://i.imgur.com/mNoVwlc.png)
+
+Simply import the module:
 ```typescript
-// other imports above
+/* app.module.ts */
+// import ...
 import { AngryLogger, AngryLogModule } from "angry-log";
 
 @NgModule({
@@ -36,6 +41,13 @@ import { AngryLogger, AngryLogModule } from "angry-log";
     ]
 })
 export class AppModule {}
+```
+
+Then:
+```typescript
+/* app.component.ts */
+// import ...
+import { AngryLogService } from "angry-log";
 
 @Component({
     selector: "app"
