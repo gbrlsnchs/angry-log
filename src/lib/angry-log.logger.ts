@@ -35,7 +35,7 @@ export class AngryLogger {
     private remoteURL: string;
 
     constructor(http: Http) {
-        this.condition = isDevMode();
+        this.logCondition = isDevMode();
         this.http = http;
         this.wrapConsole();
     }
@@ -59,7 +59,7 @@ export class AngryLogger {
         let attr: Function = window.console[attrName];
         let isFunction: boolean = typeof attr === "function";
 
-        if (attr && this.condition) {
+        if (attr && this.logCondition) {
             if (isFunction) {
                 if (this.logTitle) {
                     return attr.bind(window.console, ` %c ${this.logTitle} `, "border: solid 1px; border-radius: 25px");
@@ -71,7 +71,7 @@ export class AngryLogger {
             return attr;
         }
 
-        if (this.URL && attrName === "error") {
+        if (this.remoteURL && attrName === "error") {
             return this.remoteLog;
         }
 
@@ -79,7 +79,7 @@ export class AngryLogger {
     }
 
     private remoteLog(message: string): Observable<Response> {
-        return this.http.post(this.URL, { message })
+        return this.http.post(this.remoteURL, { message })
             .map((response: Response): Response => response.json())
             .catch((response: Response): ErrorObservable<Response> => Observable.throw(response.json()));
     }
