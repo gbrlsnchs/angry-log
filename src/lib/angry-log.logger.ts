@@ -62,7 +62,7 @@ export class AngryLogger {
         if (attr && this.logCondition) {
             if (isFunction) {
                 if (this.logTitle) {
-                    return attr.bind(window.console, ` %c ${this.logTitle} `, "border: solid 1px; border-radius: 25px");
+                    return attr.bind(window.console, `%c ${this.logTitle} `, "border: solid 1px; border-radius: 25px");
                 }
 
                 return attr.bind(window.console);
