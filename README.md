@@ -17,6 +17,7 @@ If [Angular]'s `isDevMode()` returns `true`,
 `window.console.log` and variants will work as usual. Otherwise, Angry Log will 
 look for a URL for remote logging (only for `window.console.error`).
 
+![](http://i.imgur.com/JOUm5rp.png)
 ![](https://i.imgur.com/mNoVwlc.png)
 
 Simply import the module:
