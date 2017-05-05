@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.2.1] - 2017-05-05
 ### Fixed
-- Condition value used by the Logger.
-- Remote URL value used by the HTTP Service.
+- The condition value used by the Logger.
+- Remote URL value used by the HTTP Service in the Logger.
 
 ## [0.2.0] - 2017-05-05
 ### Added
