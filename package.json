@@ -20,8 +20,9 @@
         "url": "https://github.com/gbrlsnchs/angry-log.git"
     },
     "scripts": {
-        "build": "npm run clean && npm run typescript",
+        "build": "npm run clean && npm run typescript && npm test",
         "clean": "rm -rf build",
+        "test": "karma start",
         "typescript": "./node_modules/.bin/tsc"
     },
     "devDependencies": {
@@ -29,8 +30,19 @@
         "@angular/core": "4.0.0",
         "@angular/http": "4.0.0",
         "@angular/platform-browser": "4.0.0",
+        "@types/jasmine": "2.5.47",
+        "@types/karma": "0.13.35",
+        "browserify": "14.3.0",
+        "jasmine-core": "2.6.1",
+        "karma": "1.7.0",
+        "karma-browserify": "5.1.1",
+        "karma-chrome-launcher": "2.1.1",
+        "karma-jasmine": "1.1.0",
+        "karma-typescript": "3.0.1",
         "rxjs": "5.0.1",
-        "typescript": "2.2.1",
+        "ts-node": "3.0.4",
+        "typescript": "2.2.2",
+        "watchify": "3.9.0",
         "zone.js": "^0.8.4"
     },
     "peerDependencies": {
@@ -39,7 +51,7 @@
         "@angular/http": "^4.0.0",
         "@angular/platform-browser": "^4.0.0",
         "rxjs": "^5.0.1",
-        "typescript": "^2.2.1",
+        "typescript": ">=2.2.2",
         "zone.js": "^0.8.4"
     }
 }
