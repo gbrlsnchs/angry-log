@@ -13,8 +13,6 @@ module.exports = function(config) {
             "Chrome"
         ],
         files: [
-            path.join("..", "node_modules/zone.js/dist/zone.js"),
-            path.join("..", "/node_modules/reflect-metadata/Reflect.js"),
             "**/*.spec.js"
         ],
         frameworks: [

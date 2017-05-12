@@ -27,9 +27,11 @@
     },
     "devDependencies": {
         "@angular/common": "4.0.0",
+        "@angular/compiler": "4.0.0",
         "@angular/core": "4.0.0",
         "@angular/http": "4.0.0",
         "@angular/platform-browser": "4.0.0",
+        "@angular/platform-browser-dynamic": "4.0.0",
         "@types/jasmine": "2.5.47",
         "brfs": "1.4.3",
         "browserify": "14.3.0",
@@ -46,9 +48,11 @@
     },
     "peerDependencies": {
         "@angular/common": ">=4.0.0",
+        "@angular/compiler": ">=4.0.0",
         "@angular/core": ">=4.0.0",
         "@angular/http": ">=4.0.0",
         "@angular/platform-browser": ">=4.0.0",
+        "@angular/platform-browser-dynamic": ">=4.0.0",
         "reflect-metadata": ">=0.1.10",
         "rxjs": ">=5.0.1",
         "typescript": ">=2.2.2",

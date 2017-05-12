@@ -1,25 +1,29 @@
+import "zone.js";
+import "reflect-metadata";
 import "jasmine";
 import { inject, TestBed } from "@angular/core/testing";
 import { HttpModule, Response, ResponseOptions, XHRBackend } from "@angular/http";
 import { MockBackend, MockConnection } from "@angular/http/testing";
+import { platformBrowserDynamicTesting, BrowserDynamicTestingModule } from "@angular/platform-browser-dynamic/testing";
 import { AngryLogService } from "./angry-log.service";
 
 describe("AngryLogService", (): void => {
     const TEST_URL = "/test";
 
     beforeEach((): void => {
-        TestBed.configureTestingModule({
-            imports: [
-                HttpModule
-            ],
-            providers: [
-                {
-                    provide: XHRBackend,
-                    useClass: MockBackend
-                },
-                AngryLogService
-            ]
-        });
+        TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting())
+            .configureTestingModule({
+                imports: [
+                    HttpModule
+                ],
+                providers: [
+                    {
+                        provide: XHRBackend,
+                        useClass: MockBackend
+                    },
+                    AngryLogService
+                ]
+            });
     });
 
     it("should set URL properly", inject([AngryLogService], (ngls: AngryLogService): void => {
