@@ -2,20 +2,28 @@ const path = require("path");
 
 module.exports = function(config) {
     config.set({
-        basePath: path.resolve(__dirname, "src"),
+        basePath: path.resolve(__dirname, "build"),
+        browserify: {
+            debug: true,
+            transform: [
+                "brfs"
+            ]
+        },
         browsers: [
             "Chrome"
         ],
         files: [
-            "**/*.spec.ts"
+            path.join("..", "node_modules/zone.js/dist/zone.js"),
+            path.join("..", "/node_modules/reflect-metadata/Reflect.js"),
+            "**/*.spec.js"
         ],
         frameworks: [
-            "jasmine",
-            "karma-typescript"
+            "browserify",
+            "jasmine"
         ],
         preprocessors: {
-            "**/*.ts": [
-                "karma-typescript"
+            "**/*.js": [
+                "browserify"
             ]
         }
     });
