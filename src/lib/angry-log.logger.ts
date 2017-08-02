@@ -37,22 +37,22 @@ export class AngryLogger {
     constructor(http: Http) {
         this.logCondition = isDevMode();
         this.http = http;
-        this.wrapConsole();
+        this.updatePublicApi();
     }
 
     public set condition(condition: boolean) {
         this.logCondition = condition;
-        this.wrapConsole();
+        this.updatePublicApi();
     }
 
     public set title(title: AngryLogTitle) {
         this.logTitle = typeof title === "object" ? title.constructor.name : title;
-        this.wrapConsole();
+        this.updatePublicApi();
     }
 
     public set URL(URL: string) {
         this.remoteURL = URL;
-        this.wrapConsole();
+        this.updatePublicApi();
     }
 
     private resolveFunc(attrName: string): Function {
@@ -84,9 +84,28 @@ export class AngryLogger {
             .catch((response: Response): ErrorObservable<Response> => Observable.throw(response.json()));
     }
 
-    private wrapConsole(): void {
-        for (let key of Object.keys(window.console)) {
-            this[key] = this.resolveFunc(key);
-        }
+    private updatePublicApi(): void {
+        this.assert = this.resolveFunc('assert');
+        this.clear = this.resolveFunc('clear');
+        this.count = this.resolveFunc('count');
+        this.debug = this.resolveFunc('debug');
+        this.dir = this.resolveFunc('dir');
+        this.dirxml = this.resolveFunc('dirxml');
+        this.error = this.resolveFunc('error');
+        this.exception = this.resolveFunc('exception');
+        this.group = this.resolveFunc('group');
+        this.groupCollapsed = this.resolveFunc('groupCollapsed');
+        this.groupEnd = this.resolveFunc('groupEnd');
+        this.info = this.resolveFunc('info');
+        this.log = this.resolveFunc('log');
+        this.msIsIndependentlyComposed = this.resolveFunc('msIsIndependentlyComposed');
+        this.profile = this.resolveFunc('profile');
+        this.profileEnd = this.resolveFunc('profileEnd');
+        this.select = this.resolveFunc('select');
+        this.table = this.resolveFunc('table');
+        this.time = this.resolveFunc('time');
+        this.timeEnd = this.resolveFunc('timeEnd');
+        this.trace = this.resolveFunc('trace');
+        this.warn = this.resolveFunc('warn');
     }
 }
