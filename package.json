@@ -1,6 +1,6 @@
 {
     "name": "angry-log",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "description": "Simple log service for Angular.",
     "keywords": [
         "angry-log",
@@ -20,6 +20,7 @@
         "url": "https://github.com/gbrlsnchs/angry-log.git"
     },
     "scripts": {
+        "prepublish": "npm run build",
         "build": "npm run clean && npm run typescript",
         "clean": "rm -rf build",
         "typescript": "./node_modules/.bin/tsc"

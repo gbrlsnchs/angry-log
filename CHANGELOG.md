@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.5] - 2017-08-03
+### Added
+- Prepublish routine
+
+### Fixed
+- Missing change log entry
+
+
+## [0.2.4] - 2017-08-02
+### Changed
+- The way console functions are resolved to the Logger.
+
 ## [0.2.3] - 2017-05-05
 ### Added
 - An example picture in README.
@@ -40,6 +52,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial version.
 
+[0.2.5]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.4...v0.2.5
+[0.2.4]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/gbrlsnchs/angry-log/compare/v0.2.0...v0.2.1
